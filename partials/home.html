@@ -1,0 +1,115 @@
+<section>
+<div class="container-fluid ">
+  
+        <div class="row ">
+          <div class="col-md-1">
+          </div>
+          <div class="col-md-10 ">
+            <div class="row">
+              
+                <div class="col-md-9" >
+
+                  <div ng-controller = "homeControllers">
+
+                    
+                      <Amy ng-repeat="item in oddposts" ng-class-even="'odd'">
+
+                      <div class="back" >
+                        <h3 class="space"><a href="">{{item.title}}</a></h3>
+                        <p class="space">{{item.time}}</p>
+                        <div class="row">
+                        <div class="col-md-8">
+                          <p><img src={{item.image_url}} width="100%"/></p>
+                          </div>
+                          <div class="col-md-4">
+                        <p class="space">{{item.description}}</p>
+                        <p class="text-center"><a href={{item.post_link}}><button class="btn btn-success">Read More</button></a></p>
+                        </div>
+                        </div>
+                        <br/>
+                      </div>
+
+                      </Amy>
+
+                          
+                  </div>                  
+                </div>
+                
+                
+
+
+
+
+              <div class="col-md-3">
+              <div ng-controller = "homeControllers">
+                <Amy ng-repeat= "item in bloggerProfile" > 
+                
+
+                <div class= "back">
+                  <p class="text-center space">
+                      <b>{{item.bio}}</b>
+                  </p>
+
+                </div>
+
+                <br>
+
+                <div class= "back-special">
+                  <p class="text-center" style="font-size: 20px">Recent Posts</p>
+                </div>
+
+                <div ng-controller = "homeControllers">
+                      <div class= "back">
+                
+                          <Amy ng-repeat= "item in oddposts" >
+                            <p class="text-center">
+                              <a href={{item.post_link}} class="text-center space">{{item.title}}</a>                  
+                            </p>
+                            <br>
+                            </Amy>
+                        </div>
+                </div>
+
+                <br>
+                <div class= "back-special">
+                  <p class="text-center" style="font-size: 20px">Populer Post</p>
+                </div>
+                <div class= "back">
+                            <Amy ng-repeat= "item in populerPosts" >
+                              <p class="text-center">
+                                <a href={{item.post_link}} class="text-center space">{{item.title}}</a>                  
+                              </p>
+                              <br>
+                            </Amy>                  
+                </div>
+                <br/>
+                
+                <br/>
+                
+                <div class= "back-special">
+                  <p style="font-size: 20px" class="text-center">Follow us</p>
+                  </div>
+                  <div class="back">
+                  <p class="text-center">
+                              <a href={{item.facebook}}><button class="btn-facebook"><div class="fa fa-facebook"> </div></button></a>
+                              <a href={{item.twitter}}><button class="btn-twitter"><div class="fa fa-twitter"></div></button></a>
+                              <a href={{item.gplus}}><button class="btn-google-plus"><div class="fa fa-google-plus"></div></button></a>
+                          </p> 
+                          <br>
+                </div>
+                </Amy>
+                </div>
+
+
+            
+                </div>
+              </div>
+
+            </div>
+            </div>
+            <div class="col-md-1">
+          </div>
+         </div>
+</div>
+<br/><br/><br/>
+</section>
